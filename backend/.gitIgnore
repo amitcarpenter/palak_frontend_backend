@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# WebStorm IDE settings
+.idea/
+
+# Visual Studio Code settings
+.vscode/

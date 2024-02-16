@@ -1,0 +1,165 @@
+<%- include('header.ejs') %>
+
+<style>
+  .success-message {
+    color: #4caf50;
+    font-weight: bold;
+  }
+
+  .error-message {
+    color: #f44336;
+    font-weight: bold;
+  }
+</style>
+<section class="breadcrumb-area set-bg" data-setbg="img/contact/contact-bg.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="breadcrumb-content">
+          <h2>Contact</h2>
+          <div class="links">
+            <a href="/">Home</a>
+            <a href="/contact" class="rt-breadcrumb">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="contact-info">
+          <div class="contact-details">
+            <h2>Get in Touch</h2>
+            <p>
+              Pellentesque dictum nisl in nibh dictum volutpat nec a quam.
+              Vivamus suscipit nisl quis nulla pretium, vitae ornare leo.Aenean
+              id auctor libero, gravida venenatis justo. Sed ut arcu nibh. Fusce
+              lacinia arcu in ultrices finibus. Donec vestibulum imperdiet
+              efficitur.
+            </p>
+            <ul class="address">
+              <li>Main Str, no 23, New York</li>
+              <li>+546 990221 123</li>
+              <li>Fitness@contact.com</li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <form id="contact-form" method="post">
+              <div class="row">
+                <div class="col-lg-6">
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="col-lg-12">
+                  <input
+                    id="subject"
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                  <div id="response-message"></div>
+                  <br />
+                  <button type="submit" class="site-btn">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48359.89302507648!2d-73.95762813994347!3d40.75117343692072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2592bc7bab159%3A0x56156cc4c5ee8e31!2sLong+Island+City%2C+Queens%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1561474745218!5m2!1sen!2sbd"
+      style="border: 0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const responseMessage = document.getElementById("response-message");
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Check validity using HTML5 form validation
+      if (!form.checkValidity()) {
+        showMessage(
+          '<p class="error-message">Please fill out all required fields correctly.</p>'
+        );
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      // Convert FormData to JSON object
+      const jsonObject = {};
+      formData.forEach((value, key) => {
+        jsonObject[key] = value;
+      });
+
+      console.log("jsonObject", jsonObject);
+
+      const response = await fetch("/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(jsonObject),
+      });
+
+      const responseData = await response.json();
+
+      if (response.ok) {
+        // Display success message
+        showMessage(
+          '<p class="success-message">' + responseData.message + "</p>"
+        );
+        form.reset(); // Clear form fields
+      } else {
+        // Display error message
+        showMessage('<p class="error-message">' + responseData.error + "</p>");
+      }
+
+      // Clear messages after 3 seconds
+      setTimeout(() => {
+        responseMessage.innerHTML = "";
+      }, 3000);
+    });
+
+    function showMessage(message) {
+      responseMessage.innerHTML = message;
+    }
+  });
+</script>
+
+<!-- Contact Section End -->
+<%- include('footer.ejs') %>

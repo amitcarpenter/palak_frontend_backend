@@ -35,16 +35,14 @@
           <div class="contact-details">
             <h2>Get in Touch</h2>
             <p>
-              Pellentesque dictum nisl in nibh dictum volutpat nec a quam.
-              Vivamus suscipit nisl quis nulla pretium, vitae ornare leo.Aenean
-              id auctor libero, gravida venenatis justo. Sed ut arcu nibh. Fusce
-              lacinia arcu in ultrices finibus. Donec vestibulum imperdiet
-              efficitur.
+              Let's collectively pave the way for a Fitness Revolution! Unite
+              with Coach Palak and integrate fitness seamlessly into your daily
+              existence. 💪🏠 #FitnessRevolution #CoachPalak
             </p>
             <ul class="address">
-              <li>Main Str, no 23, New York</li>
-              <li>+546 990221 123</li>
-              <li>Fitness@contact.com</li>
+              <li>Delhi India</li>
+              <li>+91 98112 28350</li>
+              <li>fitwithpalak91@gmail.com</li>
             </ul>
           </div>
           <div class="contact-form">
@@ -95,7 +93,7 @@
   </div>
   <div class="map">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48359.89302507648!2d-73.95762813994347!3d40.75117343692072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2592bc7bab159%3A0x56156cc4c5ee8e31!2sLong+Island+City%2C+Queens%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1561474745218!5m2!1sen!2sbd"
+      src="https://www.google.com/maps/embed?place/Humayun%E2%80%99s+Tomb/@28.5359486,77.2041786,12z/data=!4m15!1m8!3m7!1s0x390cfd5b347eb62d:0x52c2b7494e204dce!2sNew+Delhi,+Delhi!3b1!8m2!3d28.6139391!4d77.2090212!16zL20vMGRsdjA!3m5!1s0x390ce31ce8460ba7:0xb9f1ba2d3bdfa80d!8m2!3d28.5932848!4d77.2507492!16zL20vMDR3OWMy?entry=ttu"
       style="border: 0"
       allowfullscreen
     ></iframe>
@@ -128,7 +126,14 @@
 
       console.log("jsonObject", jsonObject);
 
-      const response = await fetch("/submit-form", {
+      // const response = await fetch("/submit-form", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(jsonObject),
+      // });
+      const response = await fetch("http://localhost:5000", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

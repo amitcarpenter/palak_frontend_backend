@@ -38,8 +38,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Template Stylesheet -->
-  <link href="style.css" rel="stylesheet" />
+  <!-- <link href="style.css" rel="stylesheet" /> -->
   <style>
+    .color-green {
+      color: green;
+    }
     .fa {
       margin-top: 15px;
     }
@@ -83,6 +86,25 @@
       margin: auto;
       width: 100px;
     }
+    .col-md-6.mb-6.amit-align {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ol,
+    ul {
+      padding-left: 0rem !important;
+    }
+    li.flex {
+      font-size: large;
+      font-weight: bold;
+    }
+    .text-\[\#2d333a\] {
+      --tw-text-opacity: 1;
+      color: rgb(45 51 58 / var(--tw-text-opacity));
+      /* font-size: large !important; */
+      font-weight: bold !important;
+    }
   </style>
 </head>
 
@@ -95,36 +117,35 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
             <div class="about-img position-relative overflow-hidden p-5 pe-0">
-              <img class="img-fluid w-100" src="img/template.avif" />
+              <img class="img-fluid w-100" src="img/pricing2.jpg" />
             </div>
           </div>
           <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <h1 class="mb-4">
-              🌟 Introducing Q Condos - Your Affordable Dream Home in Downtown
-              Kitchener! 🌟
+              🏆 Certified by the American Council on Exercise (ACE).
             </h1>
             <p class="mb-4">
-              🏡 Perfect Location: Q Condos is right in the heart of Downtown
-              Kitchener, close to everything you need - cool restaurants,
-              entertainment spots, and easy transportation.
+              🚀 Step into a Transformative Fitness Odyssey with Coach Palak
+              Sacchdeva! With a stellar career spanning 8 years in the realms of
+              corporate giants and cutting-edge startups, Coach Palak has
+              unearthed her true calling – kindling inspiration and steering
+              individuals towards a vibrant and healthier lifestyle.
             </p>
             <p>
-              <i class="amit-icon fa fa-check text-primary me-3"></i>💎 Luxury
-              Living: Imagine a stylish home with modern designs and beautiful
-              finishes. Q Condos offers comfy one-bedroom spaces and roomy
-              penthouses - there's a home for everyone!
+              <i class="amit-icon fa fa-check text-primary me-3"></i>🌟 Vision:
+              IGNITE MOVEMENT 🏋️‍♀️ In a nation where fitness is yet to weave into
+              the fabric of daily life, Coach Palak envisions transforming it
+              into an everyday household ritual. Armed with the prestigious ACE
+              certification and a flair for dance, she effortlessly fuses
+              expertise with zeal to craft a fitness experience that is both
+              unique and exhilarating.
             </p>
             <br />
             <p>
-              <i class="amit-icon fa fa-check text-primary me-3"></i>🏙️ Awesome
-              Views: Enjoy amazing city views from your window. Q Condos gives
-              you a front-row seat to the city's hustle and bustle.
-            </p>
-            <br />
-            <p>
-              <i class="amit-icon fa fa-check text-primary me-3"></i>📞 Call Us
-              Now: Reach out to us today for a tour and discover the perfect
-              blend of luxury and affordability at Q Condos!
+              <i class="amit-icon fa fa-check text-primary me-3"></i>📞 Let's
+              collectively pave the way for a Fitness Revolution! Unite with
+              Coach Palak and integrate fitness seamlessly into your daily
+              existence. 💪🏠 #FitnessRevolution #CoachPalak
             </p>
             <!-- <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a> -->
           </div>
@@ -136,59 +157,71 @@
     <!-- Pricing start 1 -->
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-4 mb-4 amit-align">
+        <div class="col-md-6 mb-6 amit-align">
           <div
             key="1"
             class="w-full max-w-sm p-4 border-t-4 border-blue-500 rounded-2xl shadow sm:p-8"
           >
             <h5 class="mb-2 text-xl text-center font-semibold text-[#9638d5]">
-              4999 Rs
+              GET SET MOVE
             </h5>
-            <p class="text-center text-sm">15% BEFORE OCCUPANCY</p>
+            <p class="text-center text-sm"></p>
             <div class="flex justify-center items-baseline text-gray-900 py-4">
-              <span class="text-3xl font-semibold">$</span>
-              <span class="text-4xl font-extrabold tracking-tight">3,500</span>
-              <span class="ms-1 text-xl font-normal text-[#2d333a]"
-                >/month</span
+              <span class="text-3xl font-semibold color-green">Rs &nbsp;</span>
+              <span
+                class="text-4xl font-extrabold tracking-tight color-success color-green"
+                >3,699/-</span
               >
+              <!-- <span class="ms-1 text-xl font-normal text-[#2d333a]"
+                >/month</span
+              > -->
             </div>
-            <p class="text-center text-sm">FOR THE FIRST 10 MONTHS</p>
+            <!-- <p class="text-center text-sm">FOR THE FIRST 10 MONTHS</p> -->
 
             <ul role="list" class="space-y-4 my-7">
               <li class="flex">
                 <span
                   class="text-sm font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 330 DAYS</span
+                  >• Daily Live classes (4 classes in a week)
+                </span>
+              </li>
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• Evening Batch at 7:15 to 8pm
+                </span>
+              </li>
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• Dedicated Personalised Meal Plans
+                </span>
+              </li>
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• access to women's health expert session</span
+                >
+              </li>
+
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• daily accountability coach & weekly progress
+                  assessment</span
                 >
               </li>
               <li class="flex">
                 <span
                   class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 365 DAYS</span
-                >
-              </li>
-              <br />
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >$3,500 EVERY 3 MONTHS AFTER</span
-                >
-              </li>
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >BALANCE TO 15% IN 900 DAYS</span
-                >
-              </li>
-              <hr />
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >5% ON OCCUPANCY</span
+                  >• exclusive membership to FWP Squad</span
                 >
               </li>
             </ul>
-
+            <br />
+            <br />
+            <br />
+            <br />
             <button
               type="button"
               id="rzp-button"
@@ -199,126 +232,84 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 amit-align">
+        <div class="col-md-6 mb-6 amit-align">
           <div
             key="1"
             class="w-full max-w-sm p-4 border-t-4 border-blue-500 rounded-2xl shadow sm:p-8"
           >
             <h5 class="mb-2 text-xl text-center font-semibold text-[#9638d5]">
-              DEPOSIT $600 - $699K
+              GET SET DANCE
             </h5>
-            <p class="text-center text-sm">15% BEFORE OCCUPANCY</p>
+            <p class="text-center text-sm"></p>
             <div class="flex justify-center items-baseline text-gray-900 py-4">
-              <span class="text-3xl font-semibold">$</span>
-              <span class="text-4xl font-extrabold tracking-tight">4,500</span>
-              <span class="ms-1 text-xl font-normal text-[#2d333a]"
-                >/month</span
+              <span class="text-3xl font-semibold color-green">Rs &nbsp;</span>
+              <span
+                class="text-4xl font-extrabold tracking-tight color-success color-green"
+                >2,399/-</span
               >
+              <!-- <span class="ms-1 text-xl font-normal text-[#2d333a]"
+                >/month</span
+              > -->
             </div>
-            <p class="text-center text-sm">FOR THE FIRST 10 MONTHS</p>
+            <!-- <p class="text-center text-sm">FOR THE FIRST 10 MONTHS</p> -->
 
             <ul role="list" class="space-y-4 my-7">
               <li class="flex">
                 <span
                   class="text-sm font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 330 DAYS</span
-                >
+                  >• Dance Classes every Sunday
+                </span>
               </li>
               <li class="flex">
                 <span
                   class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 365 DAYS</span
-                >
-              </li>
-              <br />
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >$4,500 EVERY 3 MONTHS AFTER</span
-                >
+                  >• perfect for you if you want to learn how to move your body
+                  and feel the music
+                </span>
               </li>
               <li class="flex">
                 <span
                   class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >BALANCE TO 15% IN 900 DAYS</span
                 >
+                  • Learn to develop a new skill and embrace your feminine
+                  energy
+                </span>
               </li>
-              <hr />
               <li class="flex">
                 <span
                   class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >5% ON OCCUPANCY</span
                 >
+                  • become confident by learning how to dance step by step
+                </span>
+              </li>
+
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• exclusive membership to Dance community
+                </span>
+              </li>
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• 1:1 feedback sessions
+                </span>
+              </li>
+              <li class="flex">
+                <span
+                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
+                  >• time - 11:15am to 12:30pm
+                </span>
               </li>
             </ul>
-            <a href="https://malikfarhan.com/contact" target="_blank">
-              <button
-                type="button"
-                class="amit-button border-2 text-white bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
-              >
-                Book Now
-              </button>
-            </a>
-          </div>
-        </div>
 
-        <div class="col-md-4 mb-4 amit-align">
-          <div
-            key="1"
-            class="w-full max-w-sm p-4 border-t-4 border-blue-500 rounded-2xl shadow sm:p-8"
-          >
-            <h5 class="mb-2 text-xl text-center font-semibold text-[#9638d5]">
-              DEPOSIT $700K+
-            </h5>
-            <p class="text-center text-sm">15% BEFORE OCCUPANCY</p>
-            <div class="flex justify-center items-baseline text-gray-900 py-4">
-              <span class="text-3xl font-semibold">$</span>
-              <span class="text-4xl font-extrabold tracking-tight">5,500</span>
-              <span class="ms-1 text-xl font-normal text-[#2d333a]"
-                >/month</span
-              >
-            </div>
-            <p class="text-center text-sm">FOR THE FIRST 10 MONTHS</p>
-            <br />
-            <br />
-            <ul role="list" class="space-y-4 my-7">
-              <li class="flex">
-                <span
-                  class="text-sm font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 330 DAYS</span
-                >
-              </li>
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >HALF THE BALANCE TO 10% IN 365 DAYS</span
-                >
-              </li>
-              <br />
-              <br />
-
-              <!-- <li class="flex">
-                  <span class="text-base font-normal leading-tight text-[#2d333a] ms-3">$3,500 EVERY 3 MONTHS AFTER</span>
-                </li>
-                <li class="flex">
-                  <span class="text-base font-normal leading-tight text-[#2d333a] ms-3">BALANCE TO 15% IN 900 DAYS</span>
-                </li> -->
-              <hr />
-              <li class="flex">
-                <span
-                  class="text-base font-normal leading-tight text-[#2d333a] ms-3"
-                  >5% ON OCCUPANCY</span
-                >
-              </li>
-            </ul>
-            <a href="https://malikfarhan.com/contact" target="_blank">
-              <button
-                type="button"
-                class="amit-button border-2 text-white bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
-              >
-                Book Now
-              </button>
-            </a>
+            <button
+              type="button"
+              id="rzp-button"
+              class="amit-button border-2 text-white bg-blue-500 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </div>
@@ -332,11 +323,11 @@
           data-wow-delay="0.1s"
           style="max-width: 600px"
         >
-          <h1 class="mb-3">Property Agent</h1>
+          <h1 class="mb-3">Fitness Trainer</h1>
           <p>
-            Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore
-            lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum
-            vero dolor duo.
+            💼 For Inquiries: Connect with Coach Palak at
+            fitwithpalak91@gmail.com and embark on a tailored fitness
+            expedition.
           </p>
         </div>
 
@@ -344,12 +335,21 @@
           <div class="container">
             <div class="row g-5 align-items-center">
               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-4">#1 Place To Find The Perfect Property</h1>
-                <p class="mb-4">
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                  sed stet lorem sit clita duo justo magna dolore erat amet
+                <h1 class="mb-4">
+                  #1 Place To Find The Perfect Fitness Classes
+                </h1>
+
+                <p>🏆 Certified by the American Council on Exercise (ACE).</p>
+                <p>
+                  💃 Professional dancer, injecting dynamism and artistry into
+                  every workout.
                 </p>
+                <p>📷 Instagram: @fitwithpalak</p>
+                <p>
+                  🎥 Dive into the fitness journey on YouTube: [Palak
+                  Sacchdeva](insert YouTube link)
+                </p>
+
                 <div class="d-flex align-items-center">
                   <a
                     class="btn btn-square mx-1"
@@ -404,7 +404,7 @@
     </div>
 
     <!-- Description -->
-    <div class="container-xxl">
+    <!-- <div class="container-xxl">
       <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp">
           <h1 class="mb-3">Q CONDOS - BROKER PORTAL</h1>
@@ -452,7 +452,7 @@
           <br />
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Team End -->
     <!-- Back to Top -->

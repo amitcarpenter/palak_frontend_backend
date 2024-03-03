@@ -2349,6 +2349,16 @@ ol {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .slicknav_btn {
+    margin: 5px 5px 30px;
+    border-radius: 0;
+    float: right;
+    background-color: #9638d5;
+    position: relative;
+    top: -20px !important;
+    right: -11px !important;
+  }
 }
 
 /* Small Mobile : 320px. */

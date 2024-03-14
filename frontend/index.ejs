@@ -1,649 +1,720 @@
 <%- include('header.ejs') %>
 
-<!-- Owl Carousel CSS and Theme -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-/>
+  <!-- Owl Carousel CSS and Theme -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-  }
-  .mySlides {
-    display: none;
-  }
-  img {
-    vertical-align: middle;
-  }
-
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active,
-  .dot:hover {
-    background-color: #717171;
-  }
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 6s;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0.4;
+  <style>
+    * {
+      box-sizing: border-box;
     }
-    to {
-      opacity: 1;
-    }
-  }
 
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
     .prev,
-    .next,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
     .text {
-      font-size: 11px;
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
     }
-  }
-</style>
 
-<!-- Include jQuery -->
-
-<!-- Top Social End -->
-<!-- Hero Slider Section Begin -->
-<section class="hero-slider">
-  <div class="slide-items owl-carousel">
-    <div class="single-slide set-bg active" data-setbg="img/bg.jpg">
-      <a
-        href="https://www.youtube.com/watch?v=Ad6fEjn33Po"
-        class="play-btn pop-up"
-        ><i class="fa fa-play"></i
-      ></a>
-      <h2>
-        WE EMPOWER BUSY INDIAN WOMEN TO ACHIEVE FITNESS, VITALITY, AND IMPROVED
-        HEALTH CONVENIENTLY WITHIN THE COMFORT OF THEIR HOMES!
-      </h2>
-      <!-- <a href="#" class="primary-btn">Read More</a> -->
-    </div>
-    <div class="single-slide set-bg" data-setbg="img/bg-2.jpg">
-      <a
-        href="https://www.youtube.com/watch?v=23zstTgBHws"
-        class="play-btn pop-up"
-        ><i class="fa fa-play"></i
-      ></a>
-      <h2>
-        WE EMPOWER BUSY INDIAN WOMEN TO ACHIEVE FITNESS, VITALITY, AND IMPROVED
-        HEALTH CONVENIENTLY WITHIN THE COMFORT OF THEIR HOMES!
-      </h2>
-      <!-- <a href="#" class="primary-btn">Read More</a> -->
-    </div>
-  </div>
-</section>
-<!-- Hero Slider End -->
-<!-- Features Section Begin -->
-<section class="features-section spad">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="single-features">
-          <div class="features-img">
-            <img src="img/features/feature-1.jpg" alt="" />
-          </div>
-          <div class="feature-text">
-            <div class="feature-icon">
-              <img src="img/features/icon-1.png" alt="" />
-            </div>
-            <h5>Balanced, Healthy & Sustainable Eating</h5>
-            <p>
-              True consistency in weight loss doesn't come from the latest fad
-              diet that leaves you feeling empty and fatigued. Instead, it's
-              rooted in a balanced, healthy, and sustainable approach to eating.
-              An approach that helps you achieve your fitness goals while
-              ensuring you're full of energy and well-nourished.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="single-features">
-          <div class="features-img">
-            <img
-              style="height: 265px; width: 416px"
-              src="img/features/feature-2.jpg"
-              alt=""
-            />
-          </div>
-          <div class="feature-text">
-            <div class="feature-icon">
-              <img src="img/features/icon-2.png" alt="" />
-            </div>
-            <h5>Comprehensive Training System</h5>
-            <p>
-              We go beyond the typical, draining cardio routines that create
-              muscle loss and fatigue. Our comprehensive training approach
-              includes everything from Strength training to Yoga to Zumba to
-              Pilates, designed to tone and strengthen your body - from the
-              comfort of your own home.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="single-features">
-          <div class="features-img">
-            <img src="img/features/feature-3.jpg" alt="" />
-          </div>
-          <div class="feature-text">
-            <div class="feature-icon">
-              <img src="img/features/icon-3.png" alt="" />
-            </div>
-            <h5>Your Very Own Tribe</h5>
-            <p>
-              Consistency in weight loss is more than just the right nutrition
-              and training. It's also about community. That’s why the
-              FitWithPari Tribe for Women is more than just a program - it's a
-              tribe. A tribe that ensures you're surrounded by expert coaches
-              and a supportive community of women on the same journey, to keep
-              you motivated and accountable.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Features Section End -->
-<!-- Services Section Begin -->
-<section class="services-section spad">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="section-title">
-          <span style="font-size: larger"
-            >Real women with Real Transformations.
-          </span>
-          <h2>YOU could be NEXT!</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-sm-6">
-        <div class="single-service c-text">
-          <video width="100%" height="300" controls>
-            <source src="./videos/video1.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="single-service c-text">
-          <video width="100%" height="300" controls>
-            <source src="./videos/video2.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-sm-6">
-        <div class="single-service c-text">
-          <video width="100%" height="300" controls>
-            <source src="./videos/video3.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Services Section End -->
-
-<!-- Slider Testimoni Begin -->
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-  }
-  .mySlides {
-    display: none;
-  }
-  img {
-    vertical-align: middle;
-  }
-
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active,
-  .dot:hover {
-    background-color: #717171;
-  }
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 60s;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-      font-size: 11px;
-    }
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Verdana, sans-serif;
-    margin: 0;
-  }
-
-  .slideshow-container {
-    max-width: 50%;
-    height: 800px;
-    position: relative;
-    margin: auto;
-    overflow: hidden; /* Hide overflowing content */
-  }
-
-  .mySlides {
-    display: none;
-    width: 100%; /* Make each slide fill the container width */
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-
-  /* Responsive styles for smaller screens */
-  @media only screen and (max-width: 600px) {
-    .prev,
-    .next,
+    /* Number text (1/3 etc) */
     .numbertext {
+      color: #f2f2f2;
       font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 6s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px;
+      }
+    }
+  </style>
+
+  <!-- Include jQuery -->
+
+  <!-- Top Social End -->
+  <!-- Hero Slider Section Begin -->
+  <section class="hero-slider">
+    <div class="slide-items owl-carousel">
+      <div class="single-slide set-bg active" data-setbg="img/slider-img1.jpg">
+        <a href="https://www.youtube.com/watch?v=Ad6fEjn33Po" class="play-btn pop-up"><i class="fa fa-play"></i></a>
+        <h2>
+          WE EMPOWER BUSY INDIAN WOMEN TO ACHIEVE FITNESS, VITALITY, AND IMPROVED
+          HEALTH CONVENIENTLY WITHIN THE COMFORT OF THEIR HOMES!
+        </h2>
+        <!-- <a href="#" class="primary-btn">Read More</a> -->
+      </div>
+      <div class="single-slide set-bg" data-setbg="img/bg-2.jpg">
+        <a href="https://www.youtube.com/watch?v=23zstTgBHws" class="play-btn pop-up"><i class="fa fa-play"></i></a>
+        <h2>
+          WE EMPOWER BUSY INDIAN WOMEN TO ACHIEVE FITNESS, VITALITY, AND IMPROVED
+          HEALTH CONVENIENTLY WITHIN THE COMFORT OF THEIR HOMES!
+        </h2>
+        <!-- <a href="#" class="primary-btn">Read More</a> -->
+      </div>
+    </div>
+  </section>
+  <!-- Hero Slider End -->
+
+
+
+  <section class="features-section spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img 
+           
+          src="img/trainer_1.jpg" alt="">
+
+          <div class="p-3">
+             <p class="mb-1"><strong>Experience:</strong> 3 Years</p>
+             <p class="mb-1"><strong>Age:</strong></p>
+             <p class="mb-1"><strong>Weight:</strong> 77 kg</p>
+             <p class="mb-1"><strong>Email:</strong> example@example.com</p>
+             <p class="mb-1"><strong>Phone:</strong> 801546142343243
+             </p>  
+             
+             <div>
+
+             </div>
+          </div>
+        </div>
+        <div class="col-md-6 Image_wraper">
+          <div class="pl-2">
+             <h5 class="">Meet The Trainer</h5>
+            <h1>David Smith</h1>
+            <p>Fitness Trainer</p>
+            <h2>Biography:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Ut sodales ante quis justo egestas euismod. Aenean
+              feugiat nisi commodo quam ornare dictum. Nullam a nunc non mi commodo finibus.
+              Cras fermentum dictum
+              turpis ac scelerisque. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit.</p>
+
+              <h2>Skills: </h2>
+              <label for="">Yoga</label>
+              <div class="range mb-2" style="--p:60" >
+             
+                <div class="range__label">Progress</div>
+              </div>
+              <label for="">Boxing</label>
+              <div class="range mb-2" style="--p:60 ">
+               
+                <div class="range__label">Progress</div>
+              </div>
+              <label for="">Yoga</label>
+              <div class="range" style="--p:60">
+                <div class="range__label">Progress</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section Begin -->
+  <section class="features-section spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="single-features">
+            <div class="features-img">
+              <img class="img-fluid" src="img/features/feature-1.jpg" alt="" />
+            </div>
+            <div class="feature-text">
+              <div class="feature-icon">
+                <img src="img/features/icon-1.png" alt="" />
+              </div>
+              <h5>Balanced, Healthy & Sustainable Eating</h5>
+              <p>
+                True consistency in weight loss doesn't come from the latest fad
+                diet that leaves you feeling empty and fatigued. Instead, it's
+                rooted in a balanced, healthy, and sustainable approach to eating.
+                An approach that helps you achieve your fitness goals while
+                ensuring you're full of energy and well-nourished.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-features">
+            <div class="features-img">
+              <img class="img-fluid" src="img/features/feature-2.jpg" alt="" />
+            </div>
+            <div class="feature-text">
+              <div class="feature-icon">
+                <img class="img-fluid" src="img/features/icon-2.png" alt="" />
+              </div>
+              <h5>Comprehensive Training System</h5>
+              <p>
+                We go beyond the typical, draining cardio routines that create
+                muscle loss and fatigue. Our comprehensive training approach
+                includes everything from Strength training to Yoga to Zumba to
+                Pilates, designed to tone and strengthen your body - from the
+                comfort of your own home.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-features">
+            <div class="features-img">
+              <img class="img-fluid" src="img/features/feature-3.jpg" alt="" />
+            </div>
+            <div class="feature-text">
+              <div class="feature-icon">
+                <img class="img-fluid" src="img/features/icon-3.png" alt="" />
+              </div>
+              <h5>Your Very Own Tribe</h5>
+              <p>
+                Consistency in weight loss is more than just the right nutrition
+                and training. It's also about community. That’s why the
+                FitWithPari Tribe for Women is more than just a program - it's a
+                tribe. A tribe that ensures you're surrounded by expert coaches
+                and a supportive community of women on the same journey, to keep
+                you motivated and accountable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section End -->
+  <!-- Services Section Begin -->
+  <section class="services-section spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <span style="font-size: larger">Real women with Real Transformations.
+            </span>
+            <h2>YOU could be NEXT!</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-service c-text">
+            <video width="100%" height="300" controls>
+              <source src="./videos/video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-service c-text">
+            <video width="100%" height="300" controls>
+              <source src="./videos/video2.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-service c-text">
+            <video width="100%" height="300" controls>
+              <source src="./videos/video3.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section End -->
+
+  <!-- Slider Testimoni Begin -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 60s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .main-menu .logo {
+        position: absolute;
+        left: 28%;
+        top: 18px;
+        margin-left: 0px;
+      }
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
     }
 
     .slideshow-container {
-      height: 250px; /* Adjust the height for smaller screens */
+      max-width: 50%;
+      height: 800px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+      /* Hide overflowing content */
     }
-  }
-  .main-menu .logo {
-    position: absolute;
-    left: 50%;
-    top: 18px;
-    margin-left: -13.5px !important;
-  }
 
-  a.slicknav_btn.slicknav_open {
-    width: 43px;
-  }
-
-  .slicknav_menu .slicknav_menutxt {
-    display: block;
-    line-height: 1.188em;
-    float: left;
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 1px 3px #000;
-    display: none !important;
-  }
-</style>
-<div class="slideshow-container mt-5">
-  <h2>Client Feedback</h2>
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 9</div>
-    <img src="./testimonials/testimonial1.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 9</div>
-    <img src="./testimonials/testimonial2.jpg" style="width: 100%" />
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 9</div>
-    <img src="./testimonials/testimonial3.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 9</div>
-    <img src="./testimonials/testimonial4.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 9</div>
-    <img src="./testimonials/testimonial5.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">6 / 9</div>
-    <img src="./testimonials/testimonial6.jpg" style="width: 100%" />
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">7 / 9</div>
-    <img src="./testimonials/testimonial7.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">8 / 9</div>
-    <img src="./testimonials/testimonial8.jpg" style="width: 100%" />
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">9 / 9</div>
-    <img src="./testimonials/testimonial9.jpg" style="width: 100%" />
-  </div>
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-<br />
-
-<div class="mb-5" style="text-align: center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-  <span class="dot" onclick="currentSlide(6)"></span>
-  <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
-  <span class="dot" onclick="currentSlide(9)"></span>
-</div>
-
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
-  }
-
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-      slideIndex = 1;
+    .mySlides {
+      display: none;
+      width: 100%;
+      /* Make each slide fill the container width */
     }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
 
-    // Set timeout to hide individual slide after 6 seconds
-    setTimeout(function () {
-      slides[slideIndex - 1].style.display = "none";
-      dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(
-        " active",
-        ""
-      );
-      // Move to the next slide
-      plusSlides(1);
-    }, 60000);
-  }
-</script>
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
 
-<!-- Slider Testimoni End -->
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
 
-<!-- Trainer Section Begin -->
-<section class="trainer-section set-bg" data-setbg="img/trainer-bg1.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="section-title">
-          <span style="color: black !important">The Best</span>
-          <h2>Trainer</h2>
-          <!-- <a href="#" class="primary-btn trainer-btn">See All</a> -->
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .main-menu .logo {
+      position: absolute;
+      left: 50%;
+      top: 18px;
+      margin-left: -13.5px !important;
+    }
+
+    /* Responsive styles for smaller screens */
+    @media only screen and (max-width: 600px) {
+
+      .main-menu .logo {
+        position: absolute;
+        left: 5%;
+        top: 18px;
+        margin-left: 0px;
+      }
+
+      .prev,
+      .next,
+      .numbertext {
+        font-size: 12px;
+      }
+
+      .slideshow-container {
+        height: 250px;
+        /* Adjust the height for smaller screens */
+      }
+    }
+
+
+    a.slicknav_btn.slicknav_open {
+      width: 43px;
+    }
+
+    .slicknav_menu .slicknav_menutxt {
+      display: block;
+      line-height: 1.188em;
+      float: left;
+      color: #fff;
+      font-weight: 700;
+      text-shadow: 0 1px 3px #000;
+      display: none !important;
+    }
+  </style>
+  <div class="slideshow-container mt-5">
+    <h2>Client Feedback</h2>
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 9</div>
+      <img src="./testimonials/testimonial1.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 9</div>
+      <img src="./testimonials/testimonial2.jpg" style="width: 100%" />
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 9</div>
+      <img src="./testimonials/testimonial3.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 9</div>
+      <img src="./testimonials/testimonial4.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 9</div>
+      <img src="./testimonials/testimonial5.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 9</div>
+      <img src="./testimonials/testimonial6.jpg" style="width: 100%" />
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 9</div>
+      <img src="./testimonials/testimonial7.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 9</div>
+      <img src="./testimonials/testimonial8.jpg" style="width: 100%" />
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 9</div>
+      <img src="./testimonials/testimonial9.jpg" style="width: 100%" />
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  <br />
+
+  <div class="mb-5" style="text-align: center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+
+      // Set timeout to hide individual slide after 6 seconds
+      setTimeout(function () {
+        slides[slideIndex - 1].style.display = "none";
+        dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(
+          " active",
+          ""
+        );
+        // Move to the next slide
+        plusSlides(1);
+      }, 60000);
+    }
+  </script>
+
+  <!-- Slider Testimoni End -->
+
+  <!-- Trainer Section Begin -->
+  <section class="trainer-section set-bg" data-setbg="img/trainer-bg1.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <span style="color: black !important">The Best</span>
+            <h2>Trainer</h2>
+            <!-- <a href="#" class="primary-btn trainer-btn">See All</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="single-trainer">
+            <div class="trainer-img">
+              <img src="img/trainer/palaktrainer.jpg" alt="" />
+              <!-- <div class="img-hover">
+                  <a href="#"><i class="fa fa-plus"></i></a>
+                </div> -->
+            </div>
+            <div class="trainer-text">
+              <!-- <h5>Rachel Smith <span>Aerobics Instructor</span></h5> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-trainer">
+            <div class="trainer-img">
+              <img src="img/trainer/palak.jpg" alt="" />
+              <!-- <div class="img-hover">
+                  <a href="#"><i class="fa fa-plus"></i></a>
+                </div> -->
+            </div>
+            <div class="trainer-text">
+              <h5>Palak Sachdeva<span>Fitness Trainer</span></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-trainer">
+            <div class="trainer-img">
+              <img src="img/trainer/palak3.jpg" alt="" />
+              <!-- <div class="img-hover">
+                  <a href="#"><i class="fa fa-plus"></i></a>
+                </div> -->
+            </div>
+            <div class="trainer-text">
+              <!-- <h5>James Brown <span>Aerobics Instructor</span></h5> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="single-trainer">
-          <div class="trainer-img">
-            <img src="img/trainer/palaktrainer.jpg" alt="" />
-            <!-- <div class="img-hover">
-                  <a href="#"><i class="fa fa-plus"></i></a>
-                </div> -->
-          </div>
-          <div class="trainer-text">
-            <!-- <h5>Rachel Smith <span>Aerobics Instructor</span></h5> -->
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="single-trainer">
-          <div class="trainer-img">
-            <img src="img/trainer/palak.jpg" alt="" />
-            <!-- <div class="img-hover">
-                  <a href="#"><i class="fa fa-plus"></i></a>
-                </div> -->
-          </div>
-          <div class="trainer-text">
-            <h5>Palak Sachdeva<span>Fitness Trainer</span></h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="single-trainer">
-          <div class="trainer-img">
-            <img src="img/trainer/palak3.jpg" alt="" />
-            <!-- <div class="img-hover">
-                  <a href="#"><i class="fa fa-plus"></i></a>
-                </div> -->
-          </div>
-          <div class="trainer-text">
-            <!-- <h5>James Brown <span>Aerobics Instructor</span></h5> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Traniner Section End -->
-<!-- Upcoming Event Begin -->
-<!-- <section class="upcoming-event-section spad-2">
+  </section>
+  <!-- Traniner Section End -->
+  <!-- Upcoming Event Begin -->
+  <!-- <section class="upcoming-event-section spad-2">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6">
@@ -714,10 +785,10 @@
   </div>
 </section> -->
 
-<script>
-  $(document).ready(function () {
-    $(".slide-items").owlCarousel();
-  });
-</script>
+  <script>
+    $(document).ready(function () {
+      $(".slide-items").owlCarousel();
+    });
+  </script>
 
-<%- include('footer.ejs') %>
+  <%- include('footer.ejs') %>

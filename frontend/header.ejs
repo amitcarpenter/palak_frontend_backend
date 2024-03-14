@@ -22,12 +22,35 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
     <style>
-      .main-menu .logo {
-        position: absolute;
-        left: 50%;
-        top: 38px;
-        margin-left: -78.5px !important;
-      }
+@media only screen and (max-width: 767px) {
+
+  .main-menu .logo {
+    position: absolute;
+    left: 28%;
+    top: 19px;
+    margin-left: -78.5px !important;
+}
+ 
+
+}
+
+@media only screen  and (min-width: 1024px) {
+  /* Styles for screens with a minimum width of 769px and maximum width of 1024px */
+  /* You can add your specific styles here */
+
+  .main-menu .logo {
+    position: absolute;
+    left: 55%;
+    top: 38px;
+    margin-left: -78.5px !important;
+}
+}
+
+
+
+
+
+
 
       img {
         max-width: 170%;
